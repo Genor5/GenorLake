@@ -1,0 +1,239 @@
+/* ===== RESET MINIMAL ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== VARIABLES DE COULEUR ===== */
+:root {
+    --bg-main: #05070d;
+    --bg-secondary: #0b1020;
+    --bg-card: #0f1733;
+
+    --blue-main: #3b82f6;
+    --blue-soft: #60a5fa;
+    --text-main: #e5e7eb;
+    --text-muted: #9ca3af;
+}
+
+/* ===== BASE ===== */
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: radial-gradient(
+        circle at top,
+        #0b1430,
+        var(--bg-main)
+    );
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 60px;
+    background: linear-gradient(
+        to bottom,
+        rgba(15, 23, 51, 0.8),
+        rgba(5, 7, 13, 0.6)
+    );
+    backdrop-filter: blur(8px);
+}
+
+.logo h1 {
+    font-size: 1.4rem;
+    color: white;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+nav a:hover {
+    color: var(--blue-soft);
+}
+
+/* ===== HERO ===== */
+.hero {
+    text-align: center;
+    padding: 120px 20px 100px;
+}
+
+.hero h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    background: linear-gradient(
+        to right,
+        #93c5fd,
+        #3b82f6
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+}
+
+/* ===== INPUT ZONE ===== */
+.input-zone {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.input-zone input {
+    width: 320px;
+    padding: 14px 16px;
+
+    background-color: var(--bg-secondary);
+    border: 1px solid #1e293b;
+    border-radius: 8px;
+
+    color: var(--text-main);
+}
+
+.input-zone input::placeholder {
+    color: var(--text-muted);
+}
+
+.input-zone button {
+    padding: 14px 22px;
+    border-radius: 8px;
+    border: none;
+
+    background: linear-gradient(
+        to right,
+        #2563eb,
+        #3b82f6
+    );
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.input-zone button:hover {
+    filter: brightness(1.1);
+}
+
+/* ===== SECTIONS ===== */
+section {
+    padding: 90px 60px;
+}
+
+/* ===== UTILITÉ ===== */
+.utility h3 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 1.8rem;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.feature {
+    background-color: var(--bg-card);
+    padding: 30px;
+    border-radius: 14px;
+
+    border: 1px solid #1e293b;
+}
+
+.feature h4 {
+    margin-bottom: 10px;
+    color: var(--blue-soft);
+}
+
+.feature p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* ===== PRODUITS ===== */
+.products {
+    background-color: rgba(15, 23, 51, 0.6);
+}
+
+.products h3 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.product {
+    padding: 30px;
+    background-color: var(--bg-card);
+    border-radius: 14px;
+    border: 1px solid #1e293b;
+}
+
+.product h4 {
+    margin-bottom: 10px;
+}
+
+.product p {
+    color: var(--text-muted);
+}
+
+/* ===== PRICING ===== */
+.pricing h3 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card {
+    padding: 35px;
+    background: linear-gradient(
+        to bottom,
+        #0f1733,
+        #0b1020
+    );
+    border-radius: 18px;
+    border: 1px solid #1e293b;
+    text-align: center;
+}
+
+.card .price {
+    font-size: 2rem;
+    margin: 15px 0;
+    color: var(--blue-soft);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 40px;
+    background-color: #03050a;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
